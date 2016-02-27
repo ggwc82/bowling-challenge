@@ -11,6 +11,9 @@ BowlingGame.prototype.letsBowl = function(){
     this.checkForSpare();
     this._nextFrame();
   }
+  else if (this.playBall() == 10) {
+    this.scoreCard.strikeBonus =: 
+  }
   else { this.frameIndex++};
 };
 

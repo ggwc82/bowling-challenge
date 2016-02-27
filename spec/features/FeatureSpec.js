@@ -26,6 +26,15 @@ describe('JavaScript Bowling Game', function(){
 
   });
 
+  it('I can bowl a strike and it will give me double points on the next two bowls', function(){
+    var game = new BowlingGame();
+    spyOn(game, "playBall").and.returnValues(10, 5, 5);
+    game.letsBowl();
+    game.letsBowl();
+    game.letsBowl();
+    expect(game.scoreCard.getScore()).toBe(30); 
+  });
+    
 
 
 
